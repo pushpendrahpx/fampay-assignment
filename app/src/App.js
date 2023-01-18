@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "antd/dist/reset.css";
+import { Layout, Typography } from "antd";
+import Keywords from "./components/Keywords";
+const { Header, Footer, Sider, Content } = Layout;
+
+const { Title } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App h-full">
+      <Layout className="h-full">
+        <Header style={{ display: "grid", placeContent: "center" }}>
+          <Title
+            style={{
+              color: "white",
+              verticalAlign: "middle",
+              padding: "10px 0 0 0",
+            }}
+            level={2}
+          >
+            Fampay Assignment
+          </Title>
+        </Header>
+        <Layout>
+          <Sider>
+            {" "}
+            <Keywords />{" "}
+          </Sider>
+          <Content>Content</Content>
+        </Layout>
+      </Layout>
     </div>
   );
 }
