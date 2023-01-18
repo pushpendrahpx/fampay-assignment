@@ -7,6 +7,6 @@ app.use(express.static("client/build"));
 const path = require("path");
 app.use(express.static(path.join(__dirname, "build")));
 // if not in production use the port 5000
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 5000;
 console.log("server started on port:", PORT);
 app.listen(PORT);
