@@ -24,3 +24,9 @@ services:
     image: redis:alpine
     ports:
       - "6379:6379"
+
+  reactserver:
+    container_name: "reactserver"
+    build: ./reactserver
+    ports:
+      - 80:80
