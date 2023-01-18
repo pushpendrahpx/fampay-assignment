@@ -29,4 +29,4 @@ services:
     container_name: "reactserver"
     build: ./reactserver
     ports:
-      - 80:80
+      - 5000:5000
