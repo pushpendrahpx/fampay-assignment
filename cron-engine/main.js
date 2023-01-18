@@ -8,7 +8,7 @@ const CronJob = require("cron").CronJob;
 const keywords = require("./keywords.json");
 const { redisConnection } = require("./inits/redis");
 
-const { API_KEY1, API_KEY2 } = process.env.API_KEY;
+const { API_KEY1, API_KEY2 } = process.env;
 const APIKEYS = [API_KEY1, API_KEY2];
 
 // This Var helps to maintain from which API KEY are we fetching
