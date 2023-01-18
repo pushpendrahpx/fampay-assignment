@@ -1,0 +1,26 @@
+version: "3.1"
+services:
+  cronengine:
+    container_name: "cron-engine"
+    build: ./cron-engine
+    restart: on-failure
+    links:
+      - redis
+    depends_on:
+      - redis
+
+  apiserver:
+    container_name: "apiserver"
+    build: ./apiserver
+    ports:
+      - 8000:8000
+    links:
+      - redis
+    depends_on:
+      - redis
+
+  redis:
+    container_name: "redis"
+    image: redis:alpine
+    ports:
+      - "6379:6379"
