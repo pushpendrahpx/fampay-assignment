@@ -1,6 +1,10 @@
 # fampay-assignment
 Fampay Assignment
 
+
+To Execute it on your machine ? 
+1. ``` docker compose up ```
+
 Made with ❤️ by Pushpendra Vishwakarma.
 
 Frontend App - https://fampay.pushpendrahpx.me/
